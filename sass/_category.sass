@@ -1,0 +1,84 @@
+.category
+  padding: 130px 0 65px 0
+  &__row
+    text-align: center
+  &__title
+
+  &__slider
+    margin-top: 80px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    margin: 0 -10px
+  &__item
+    display: flex
+    justify-content: space-between
+    flex: 1 0 33.333%
+    padding: 0 10px
+  &__text
+    font-size: 18px
+    line-height: 27px
+    text-align: center
+    margin: 70px 0 0 0
+  &__button
+    margin-top: 42px
+
+.item
+  display: flex
+  position: relative
+  flex: 1 0 33.333%
+  flex-direction: column
+  align-items: center
+  border: 1px solid rgba(#1B1B1B, 0.2)
+  padding: 67px 0 38px 0
+  overflow: hidden
+  &__img
+    position: relative
+    display: flex
+    align-items: flex-end
+    flex: 1 0 auto
+    &-second
+      flex: 1 0 auto
+      position: absolute
+      bottom: -45px
+      right: -55px
+    & img
+      object-fit: cover
+      max-width: 100%
+  &__title
+    margin-top: 50px
+  &__info
+    font-size: 16px
+    line-height: 22px
+    margin-top: 12px
+    color: #343434
+    & img
+      cursor: pointer
+      margin-right: 12.5px
+    & a
+      color: #343434
+    &-text
+      position: absolute
+      left: auto
+      top: 50%
+      background-color: $color-second
+      padding: 29px 50px
+      text-align: left
+      transition: 0.3s all
+      visibility: hidden
+      opacity: 0
+      &--active
+        visibility: visible
+        opacity: 1
+
+.scrab
+  &-second
+    transform: rotate(19deg)
+
+.mask
+  .item__img-second
+    right: -80px
+
+.oil
+  .item__img-second
+    right: -100px

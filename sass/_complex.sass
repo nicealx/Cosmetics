@@ -1,0 +1,191 @@
+.complex
+  padding: 75px 0
+  &__subtitle
+    margin-top: 23px
+  &__body
+    margin-top: 45px
+  &__head
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 0 auto
+    max-width: 760px
+  &__category
+    font-size: 18px
+    line-height: 24px
+    padding: 14px 27px
+    border: 1px solid$color-bg
+    margin: 10px 5px
+    cursor: pointer
+    &--active
+      background-color: $color-bg
+      color: #ffffff
+  &__product
+    display: none
+    &--active
+      display: block
+
+.product
+  &__title
+    font-weight: 600
+    font-size: 35px
+    line-height: 59px
+  &__subtitle
+    font-size: 16px
+    line-height: 23px
+  &__wrapper
+    display: flex
+    margin-top: 32px
+  &__picture
+    position: relative
+    max-height: 500px
+    flex: 0 0 420px
+    &-img
+      width: 100%
+      height: 100%
+      object-fit: contain
+    &-info
+      &-link
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 19px 0 18px 0
+        position: relative
+        bottom: 60px
+        width: 100%
+        background-color: $color-bg
+        color: #ffffff
+        cursor: pointer
+        & img
+          margin-right: 13px
+        &:hover
+          & .product__picture-info-text
+            visibility: visible
+            opacity: 1
+            transition: 0.3s all
+      &-text
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 30px 56px 30px 41px
+        position: absolute
+        left: 0
+        bottom: 60px
+        right: 0
+        width: 100%
+        font-size: 16px
+        line-height: 25px
+        background-color: #282828
+        color: #ffffff
+        visibility: hidden
+        opacity: 0
+        transition: 0.3s all
+  &__body
+    margin-left: 103px
+  &__price
+    display: flex
+    margin-top: 36px
+    &-old      
+      font-weight: 600
+      font-size: 22px
+      line-height: 32px
+      text-decoration: line-through
+      color: #959595
+    &-new
+      position: relative
+      margin-left: 17px
+      font-family: $gilroy
+      font-weight: 600
+      font-size: 34px
+      line-height: 42px
+      color: $color-bg
+      text-decoration: none
+    &-percent
+      position: absolute
+      right: -55px
+      top: -30px
+      display: flex
+      align-items: center
+      text-align: center
+      font-weight: 600
+      font-size: 16px
+      line-height: 23px
+      padding: 5px 8px
+      background-color: #FF6565
+      border-radius: 3px
+      color: #ffffff
+  &__info
+    display: flex
+    &-column
+      min-height: 301px
+      height: 100%
+      &:first-child
+        flex: 0 0 420px
+        padding-right: 57px
+        margin-top: 21px
+      &:last-child
+        flex: 0 0 292px
+        margin-left: 5px
+        background-color: #FFF5E8
+        padding: 24px 23px 40px 57px
+      &-title
+        font-weight: 600
+        font-size: 20px
+        line-height: 29px
+        color: #959595
+    & ul
+      & li
+        font-size: 16px
+        color: $color-bg
+    &-result
+      margin-top: 7px
+      & li
+        position: relative
+        line-height: 25px
+        padding-left: 20px
+        &::before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 0
+          width: 5px
+          height: 5px
+          border-radius: 50%
+          background-color: #F8C378
+    &-bonus
+      margin-top: 24px
+      & li
+        display: flex
+        align-items: center
+        margin-top: 31px
+        line-height: 15px
+        &:first-child
+          margin-top: 24px
+      & img
+        flex: 0 0 43px
+        max-width: 100%
+        margin-right: 16px
+  &__subinfo
+    display: flex
+    margin-top: -2px
+    &-columns
+      display: flex
+      flex: 1 1 auto
+      &:first-child
+        flex: 0 0 310px
+        margin-right: 38px
+        flex-direction: column
+      &:last-child
+        font-size: 16px
+        line-height: 21px
+        color: #696969
+        margin-top: 18px
+  &__subinfo
+    &-text
+      text-align: center
+      margin-top: 9px
+      color: #696969
+      font-size: 13px 
+      line-height: 18px
+  &__btn
+    padding: 39px 45px 41px 45px
