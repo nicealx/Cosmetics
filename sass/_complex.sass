@@ -1,5 +1,9 @@
 .complex
   padding: 75px 0
+  +_960
+    padding: 40px 0
+  +_480
+    padding: 32px 0
   &__subtitle
     margin-top: 23px
   &__body
@@ -22,24 +26,44 @@
       color: #ffffff
   &__product
     display: none
+    +_960
+      margin-top: 65px
     &--active
-      display: block
+      display: flex
 
 .product
+  margin-top: 32px
+  position: relative
+  +_960
+    margin-top: 66px
+    min-height: 760px
+    height: 100%
+  +_480
+    flex-direction: column
+    align-items: center
+  &__body
+    display: flex
+    flex-direction: column
+    flex: 0 0 420px
   &__title
     font-weight: 600
     font-size: 35px
-    line-height: 59px
+    +_960
+      font-size: 25px
   &__subtitle
     font-size: 16px
     line-height: 23px
-  &__wrapper
-    display: flex
-    margin-top: 32px
+    margin-top: 20px
+    +_960
+      font-size: 14px
+      line-height: 21px
   &__picture
-    position: relative
-    max-height: 500px
+    margin-top: 32px
     flex: 0 0 420px
+    max-height: 498px
+    +_480
+      flex: 0 0 auto
+      max-width: 349px
     &-img
       width: 100%
       height: 100%
@@ -80,17 +104,30 @@
         visibility: hidden
         opacity: 0
         transition: 0.3s all
-  &__body
+  &__text
     margin-left: 103px
+    margin-top: 110px
+    +_1140
+      margin-left: 25px
+    +_960
+      margin-left: 60px
+      margin-top: -45px
+    +_480
+      margin-left: 45px
   &__price
     display: flex
     margin-top: 36px
+    +_480
+      justify-content: center
     &-old      
       font-weight: 600
       font-size: 22px
       line-height: 32px
       text-decoration: line-through
       color: #959595
+      +_960
+        font-size: 20px
+        line-height: 29px
     &-new
       position: relative
       margin-left: 17px
@@ -100,34 +137,46 @@
       line-height: 42px
       color: $color-bg
       text-decoration: none
+      +_960
+        font-size: 30px
+        line-height: 44px
     &-percent
       position: absolute
       right: -55px
-      top: -30px
+      top: -35px
       display: flex
       align-items: center
       text-align: center
       font-weight: 600
       font-size: 16px
       line-height: 23px
-      padding: 5px 8px
+      padding: 3px 10px
       background-color: #FF6565
       border-radius: 3px
       color: #ffffff
+      +_960
+        font-size: 14px
+        line-height: 21px
   &__info
     display: flex
+    +_960
+      flex-wrap: wrap
+      margin-top: 20px
     &-column
-      min-height: 301px
-      height: 100%
+      +_1140
+        padding-right: 5px
       &:first-child
-        flex: 0 0 420px
-        padding-right: 57px
         margin-top: 21px
       &:last-child
-        flex: 0 0 292px
         margin-left: 5px
         background-color: #FFF5E8
         padding: 24px 23px 40px 57px
+        +_1140
+          padding-left: 20px
+        +_960
+          padding: 17px 48px
+        +_480
+          padding: 17px 0 27px 66px
       &-title
         font-weight: 600
         font-size: 20px
@@ -137,6 +186,10 @@
       & li
         font-size: 16px
         color: $color-bg
+        +_960
+         font-size: 15px
+         line-height: 23px
+         flex: 0 0 33.333%
     &-result
       margin-top: 7px
       & li
@@ -154,6 +207,13 @@
           background-color: #F8C378
     &-bonus
       margin-top: 24px
+      +_960
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-top: 0
+      +_480
+        display: block
       & li
         display: flex
         align-items: center
@@ -161,13 +221,23 @@
         line-height: 15px
         &:first-child
           margin-top: 24px
+          +_960
+            margin-top: 0
+          +_480
+            margin-top: 18px
+        +_960
+          margin-top: 0
+        +_480
+          margin-top: 9px
       & img
         flex: 0 0 43px
         max-width: 100%
         margin-right: 16px
   &__subinfo
     display: flex
-    margin-top: -2px
+    margin-top: 35px
+    +_960
+      margin-top: 22px
     &-columns
       display: flex
       flex: 1 1 auto
@@ -175,12 +245,26 @@
         flex: 0 0 330px
         margin-right: 38px
         flex-direction: column
+        +_960
+          flex: 0 0 auto
+          order: 2
+          margin-top: 18px
+        +_480
+          margin-right: 0
       &:last-child
         font-size: 16px
         line-height: 21px
         color: #696969
         margin-top: 18px
+        +_960
+          order: 1
+          margin-top: 0
+        +_480
+        text-align: center
   &__subinfo
+    +_960
+      display: flex
+      flex-direction: column
     &-text
       text-align: center
       margin-top: 9px
@@ -188,4 +272,19 @@
       font-size: 13px 
       line-height: 18px
   &__btn
-    padding: 39px 45px 41px 45px
+    justify-content: center
+    padding: 34px 40px 37px 40px
+.bonus
+  +_960
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: auto
+    min-height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+  +_480
+    position: inherit
+    margin-top: 31px

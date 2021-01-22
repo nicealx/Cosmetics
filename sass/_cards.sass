@@ -2,6 +2,13 @@
   position: relative
   margin-top: calc(330px/-2)
   z-index: 2
+  +_960
+    margin-left: 125px
+    margin-right: 125px
+    margin-top: -190px
+  +_480
+    margin-left: 73px
+    margin-right: 73px
   &__row
     display: flex
     flex-wrap: wrap
@@ -10,9 +17,14 @@
     display: flex
     padding: 0 10px
     flex: 1 1 25%
+    +_960
+      flex: 1 1 50%
+      padding: 10px
+    +_480
+      flex: 1 1 100%
   &__wrapper
     display: flex
-    background-color: $color-bg
+    background-color: $color-bg        
   &__body
     display: flex
     margin: 11px
@@ -25,6 +37,9 @@
     display: flex
     min-height: 135px
     flex: 0 0 auto
+    +_960
+      max-height: 90px
+      min-height: 90px
     & img
       max-width: 100%
   &__text
@@ -33,5 +48,7 @@
     text-align: center
     color: #ffffff
     flex: 1 1 auto
+    +_960
+      padding-top: 43px
     & span
       color: $color-main

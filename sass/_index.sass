@@ -5,6 +5,22 @@ $gilroy: 'Gilroy', sans-serif
 $color-main: #F8C378
 $color-second: #F5D3A3
 $color-bg: #1C1C1C
+
+=_1140
+  @media (max-width: 1140px)
+      @content
+
+=_960
+  @media (max-width: 960px)
+      @content
+
+=_480
+  @media (max-width: 480px)
+      @content
+
+=_320
+  @media (max-width: 320px)
+      @content
   
 
 body
@@ -20,6 +36,11 @@ body
   max-width: 1275px
   margin: 0 auto
   padding: 0 17.5px
+  +_960
+    padding: 0 50px
+  +_480
+    max-width: 437px
+    margin: 0
 
 .btn
   text-align: center
@@ -40,6 +61,9 @@ body
   font-size: 40px
   line-height: 53px
   text-align: center
+  +_480
+    font-size: 24px
+    line-height: 32px
 .subtitle
   font-size: 25px
   line-height: 34px
