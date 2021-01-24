@@ -27,22 +27,24 @@
             <div class="header__subtitle">специальное предложение в предверии <br> Нового Года скидки до 30% на наборы
               косметики BL</div>
           </div>
-          <div class="header__slider">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
+          <div class="header__slider slider">
+            <div class="slider-container">
+              <div class="slider-wrapper">
+                <div class="slider-slide">
+                  <img src="img/header/slider/slide1.jpg" alt="slide">
+                </div>
+                <div class="slider-slide">
                   <img src="img/header/slider/slide2.jpg" alt="slide">
                 </div>
-                <div class="swiper-slide">
-                  <img src="img/header/slider/slide2.jpg" alt="slide">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/header/slider/slide2.jpg" alt="slide">
+                <div class="slider-slide">
+                  <img src="img/header/slider/slide3.jpg" alt="slide">
                 </div>
               </div>
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="slider-button">
+                <div class="slider-button-prev"></div>
+                <div class="slider-button-next"></div>
+              </div>
             </div>
           </div>
           <a href="#" class="header__body-button btn"><img src="img/fingerprint.svg" alt=""> посмотреть наборы</a>
@@ -175,8 +177,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="button-prev"></div>
-                <div class="button-next"></div>
+                <div class="category-button">
+                  <div class="category-button-prev"></div>
+                  <div class="category-button-next"></div>
+                </div>
               </div>
             </div>
             <div class="category__text">Получите полный каталог продукции BL Cosmetics <br> с описанием свойств, состава
@@ -798,7 +802,7 @@
   </footer>
   </div>
 </body>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="module">
   import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
@@ -806,29 +810,13 @@
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  }
+  slidesPerView: 1
 })
-
-// var categorySwiper = new Swiper('.category__slider', {
-//   // Optional parameters
-//   direction: 'horizontal',
-//   loop: true,
-//   navigation: {
-//     nextEl: '.button-next',
-//     prevEl: '.button-prev',
-//   },
-//   slidesPerView: 3
-// })
-</script>
+</script> -->
 <script src="js/script.js"></script>
 
 </html>

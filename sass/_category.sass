@@ -6,25 +6,78 @@
   &__row
     text-align: center
   &__title
-
   &__slider
+    position: relative
     margin-top: 80px
+    +_480
+      width: 355px
+      margin-left: auto
+      margin-right: auto
   &__wrapper
     display: flex
     justify-content: space-between
     margin: 0 -10px
+    +_480
   &__item
     display: flex
     justify-content: space-between
     flex: 1 0 33.333%
     padding: 0 10px
+    +_960
+      display: none
+      height: 520px
+    +_480
+      display: none
+      flex: 1 0 100%
+    &--active
+      display: flex
   &__text
     font-size: 18px
     line-height: 27px
     text-align: center
     margin: 70px 0 0 0
-  &__button
-    margin-top: 42px
+  &-button
+    display: none
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    justify-content: space-between
+    +_960
+      display: flex
+    &-next, &-prev
+      position: relative
+      background-color: #1C1C1C
+      width: 56px
+      height: 56px
+      border-radius: 50%
+      cursor: pointer
+      +_480
+        width: 40px
+        height: 40px
+      &::after
+        content: ''
+        position: absolute
+        width: 25%
+        height: 25%
+        border-top: 2px solid #ffffff
+        border-right: 2px solid #ffffff
+        +_960
+        +_480
+    &-next
+      +_960
+        right: -28px
+      +_480
+        right: -20px
+      &::after
+        transform: translate(-65%, 150%) rotate(45deg)
+    &-prev
+      +_960
+        left: -28px
+      +_480
+        left: -20px
+      &::after
+        transform: translate(-35%, 150%) rotate(-135deg)
 
 .item
   display: flex
