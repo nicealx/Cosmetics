@@ -28,6 +28,7 @@ $(document).ready(function(){
     var owlCategory = $('.category__wrapper');
     if($(window).width() <= 960) {
       owlCategory.owlCarousel({
+        margin: 10.5,
         responsive: {
           481: {
             items: 2
@@ -35,14 +36,35 @@ $(document).ready(function(){
           0: {
             items: 1
           }
-        },
-        navClass: ['owl-category-button-prev', 'owl-category-button-next']
+        }
       });
       $('.category-button-prev').click(function() {
           owlCategory.trigger('prev.owl.carousel');
         });
       $('.category-button-next').click(function() {
           owlCategory.trigger('next.owl.carousel');
+        });
+    }
+
+    
+    var owlReviews = $('.reviews__slider');
+    if($(window).width() <= 960) {
+      owlReviews.owlCarousel({
+        responsive: {
+          481: {
+            items: 2
+          },
+          0: {
+            items: 1,
+            margin: 5
+          }
+        }
+      });
+      $('.reviews-button-prev').click(function() {
+          owlReviews.trigger('prev.owl.carousel');
+        });
+      $('.reviews-button-next').click(function() {
+          owlReviews.trigger('next.owl.carousel');
         });
     }
 });

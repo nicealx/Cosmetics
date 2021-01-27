@@ -36,8 +36,11 @@
   position: relative
   +_960
     margin-top: 66px
-    min-height: 760px
+    min-height: 710px
     height: 100%
+  +_720
+    flex-direction: column
+    align-items: center
   +_480
     flex-direction: column
     align-items: center
@@ -45,11 +48,15 @@
     display: flex
     flex-direction: column
     flex: 0 0 420px
+    +_960
+      flex-basis: 300px
   &__title
     font-weight: 600
     font-size: 35px
     +_960
       font-size: 25px
+    +_480
+      max-width: 349px
   &__subtitle
     font-size: 16px
     line-height: 23px
@@ -67,7 +74,7 @@
     &-img
       width: 100%
       height: 100%
-      object-fit: contain
+      object-fit: cover
     &-info
       &-link
         display: flex
@@ -110,10 +117,13 @@
     +_1140
       margin-left: 25px
     +_960
-      margin-left: 60px
+      margin-left: 25px
       margin-top: -45px
+    +_720
+      margin-top: 25px
+      margin-left: 25px
     +_480
-      margin-left: 45px
+      margin-left: 0
   &__price
     display: flex
     margin-top: 36px
@@ -249,6 +259,7 @@
           flex: 0 0 auto
           order: 2
           margin-top: 18px
+          margin-right: 0
         +_480
           margin-right: 0
       &:last-child
@@ -259,6 +270,7 @@
         +_960
           order: 1
           margin-top: 0
+          font-size: 13px
         +_480
         text-align: center
   &__subinfo
@@ -274,6 +286,12 @@
   &__btn
     justify-content: center
     padding: 34px 40px 37px 40px
+    +_960
+      font-size: 15px
+      padding: 30px
+    +_720
+      padding: 25px
+      font-size: 16px
 .bonus
   +_960
     position: absolute
@@ -285,6 +303,8 @@
     display: flex
     flex-direction: column
     align-items: center
+  +_720
+    position: inherit
   +_480
     position: inherit
     margin-top: 31px

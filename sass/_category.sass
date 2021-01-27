@@ -12,10 +12,14 @@
       width: 355px
       margin-left: auto
       margin-right: auto
+    +_320
+      max-width: 280px
   &__wrapper
     display: flex
     justify-content: space-between
     margin: 0 -10px
+    +_960
+      margin: 0
   &__item
     display: flex
     justify-content: space-between
@@ -24,7 +28,9 @@
     +_960
       height: 520px
     +_480
-      flex: 1 0 100%
+      flex: 0 0 100%
+    +_320
+      padding: 0
   &__text
     font-size: 18px
     line-height: 27px
@@ -59,13 +65,13 @@
         height: 25%
         border-top: 2px solid #ffffff
         border-right: 2px solid #ffffff
-        +_960
-        +_480
     &-next
       +_960
         right: -28px
       +_480
         right: -20px
+      +_320
+        right: -15px
       &::after
         transform: translate(-65%, 150%) rotate(45deg)
     &-prev
@@ -73,6 +79,8 @@
         left: -28px
       +_480
         left: -20px
+      +_320
+        left: -15px
       &::after
         transform: translate(-35%, 150%) rotate(-135deg)
 
@@ -85,6 +93,8 @@
   border: 1px solid rgba(#1B1B1B, 0.2)
   padding: 67px 0 38px 0
   overflow: hidden
+  +_320
+    flex: 0 0 279px
   &__img
     position: relative
     display: flex

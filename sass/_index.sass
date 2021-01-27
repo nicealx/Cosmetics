@@ -14,6 +14,14 @@ $color-bg: #1C1C1C
   @media (max-width: 960px)
       @content
 
+=_720
+  @media (max-width: 720px)
+      @content
+
+=min720
+  @media (min-width: 720px)
+      @content
+
 =_480
   @media (max-width: 480px)
       @content
@@ -40,6 +48,8 @@ body
     padding: 0 50px
   +_480
     padding: 0 17.5px
+  +_320
+    padding: 0 5px
 .btn
   text-align: center
   display: inline-flex

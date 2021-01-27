@@ -1,10 +1,14 @@
 .footer
   padding: 0 0 69px 0
+  +_960
+    padding: 0 0 50px 0
   &__row
     color: $color-bg
     font-size: 16px
     line-height: 22px
     text-align: center
+    +_320
+      padding: 37px 0 47px 0
   &__body
     display: flex
     justify-content: space-between
@@ -14,16 +18,22 @@
       flex-direction: column
   &__logo
     flex: 0 1 256px
+    +_320
+      flex-basis: auto
     & img
       min-width: 100%
   &__info
     margin-top: 57px
+    +_320
+      margin-top: 29px
   &__link
     text-decoration: underline
     color: $color-bg
   &__rights
     text-align: right
     margin-top: 20px
+    +_320
+      text-align: center
   &__text
     text-transform: uppercase
     font-size: 14px

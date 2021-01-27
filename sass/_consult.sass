@@ -22,27 +22,56 @@
     color: #ffffff
     +_480
       flex-direction: column
+    +_320
+      position: relative
+      padding-top: 50px
+      padding-bottom: 160px
   &__column
   &__body
     flex: 1 1 auto
+    +_320
+      text-align: center
   &__title
     font-weight: 600
     font-size: 45px
     line-height: 54px
     text-align: left
+    +_320
+      font-size: 18px
+      line-height: 24px
+      text-align: center
   &__text
     font-size: 24px
     line-height: 36px
     color: #A5A5A5
     margin-top: 24px
+    +_320
+      font-size: 14px
+      line-height: 21px
   &__btn
     margin-top: 65px
     padding: 30px 60px
+    +_320
+      display: flex
+      justify-content: center
+      padding: 0
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 62px
+      font-size: 13px
+      min-width: 277px
+      min-height: 75px
     & img
       margin-right: 20px
+      +_320
+        max-width: 20px
   &__img    
     flex: 0 0 561px
+    +_320
+      margin-top: 34px
+      padding: 0 22px
     & img
-      object-fit: contain
+      object-fit: cover
       width: 100%
       height: 100%
