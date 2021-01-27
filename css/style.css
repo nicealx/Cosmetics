@@ -1779,7 +1779,7 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__row {
     position: relative;
     padding-top: 50px;
@@ -1806,7 +1806,7 @@ body {
   text-align: left;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__title {
     font-size: 18px;
     line-height: 24px;
@@ -1821,7 +1821,7 @@ body {
   margin-top: 24px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__text {
     font-size: 14px;
     line-height: 21px;
@@ -1833,7 +1833,7 @@ body {
   padding: 30px 60px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1848,6 +1848,14 @@ body {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     bottom: 62px;
+    font-size: 16px;
+    min-width: 362px;
+    min-height: 85px;
+  }
+}
+
+@media (max-width: 320px) {
+  .consult__btn {
     font-size: 13px;
     min-width: 277px;
     min-height: 75px;
@@ -1858,7 +1866,7 @@ body {
   margin-right: 20px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__btn img {
     max-width: 20px;
   }
@@ -1870,9 +1878,15 @@ body {
           flex: 0 0 561px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .consult__img {
     margin-top: 34px;
+    padding: 0 89px;
+  }
+}
+
+@media (max-width: 320px) {
+  .consult__img {
     padding: 0 22px;
   }
 }
@@ -1901,7 +1915,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .footer__row {
     padding: 37px 0 47px 0;
   }
@@ -1934,7 +1948,7 @@ body {
           flex: 0 1 256px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .footer__logo {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -1949,7 +1963,7 @@ body {
   margin-top: 57px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .footer__info {
     margin-top: 29px;
   }
@@ -1965,7 +1979,7 @@ body {
   margin-top: 20px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .footer__rights {
     text-align: center;
   }
