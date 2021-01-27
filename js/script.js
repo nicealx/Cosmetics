@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-
   const info = document.querySelectorAll('.info');
   const infoText = document.querySelectorAll('.item__info-text');
 
@@ -36,4 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   showTabs(0);
   hideTab();
+
+  const allLink = document.querySelectorAll('a');
+
+  allLink.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('click');
+    });
+  });
 });
