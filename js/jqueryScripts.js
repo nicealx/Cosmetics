@@ -28,7 +28,14 @@ $(document).ready(function(){
     var owlCategory = $('.category__wrapper');
     if($(window).width() <= 960) {
       owlCategory.owlCarousel({
-        items: 2,
+        responsive: {
+          481: {
+            items: 2
+          },
+          0: {
+            items: 1
+          }
+        },
         navClass: ['owl-category-button-prev', 'owl-category-button-next']
       });
       $('.category-button-prev').click(function() {
