@@ -1,41 +1,41 @@
 .slider
-  display: flex
-  justify-content: center
-  overflow: visible
   margin-top: 38px
-  &-container
-    position: relative
-    max-width: 860px
-    height: 491px
+  position: relative
+  &-body
+    &>.owl-item
+      opacity: 0.3
+      transition: opacity 0.3s
+      &.active.center
+        opacity: 1
+        transition: opacity 0.3s
+  &-slide
+    max-width: 890px
     +_960
+      margin: 0 auto
       max-width: 650px
-      max-height: 371px
     +_480
       max-width: 440px
-      max-height: 251px
-  &-wrapper
-  &-slide
-    display: none
-    width: 100%
-    visibility: hidden
-    opacity: 0
-    transition: visibility 0.3s, opacity 0.3s
-    &--active
-      display: block
-      visibility: visible
-      opacity: 1
-      transition: visibility 0.3s, opacity 0.3s
-    & img
-      width: 100%
-      height: 100%
-      object-fit: cover
+    +_320
+      max-width: 320px
   &-button
+    display: flex
+    justify-content: center
     position: absolute
     top: 50%
     transform: translateY(-50%)
+    z-index: 2
     width: 100%
-    display: flex
-    justify-content: space-between
+    &-container
+      display: flex
+      justify-content: space-between
+      max-width: 890px
+      width: 100%
+      +_960
+        max-width: 650px
+      +_480
+        max-width: 440px
+      +_320
+        max-width: 320px
     &-next, &-prev
       position: relative
       background-color: #1C1C1C
@@ -56,14 +56,14 @@
         height: 25%
         border-top: 2px solid #ffffff
         border-right: 2px solid #ffffff
-        +_960
-        +_480
     &-next
       right: 49px
       +_960
         right: 37px
       +_480
-        right: 20px
+        right: 19px
+      +_320
+        right: 16px
       &::after
         transform: translate(-65%, 150%) rotate(45deg)
     &-prev
@@ -71,6 +71,8 @@
       +_960
         left: 37px
       +_480
-        left: 20px
+        left: 19px
+      +_320
+        right: 16px
       &::after
         transform: translate(-35%, 150%) rotate(-135deg)

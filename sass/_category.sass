@@ -5,7 +5,6 @@
     padding-bottom: 40px
   &__row
     text-align: center
-  &__title
   &__slider
     position: relative
     margin-top: 80px
@@ -17,25 +16,22 @@
     display: flex
     justify-content: space-between
     margin: 0 -10px
-    +_480
   &__item
     display: flex
     justify-content: space-between
     flex: 1 0 33.333%
     padding: 0 10px
     +_960
-      display: none
       height: 520px
     +_480
-      display: none
       flex: 1 0 100%
-    &--active
-      display: flex
   &__text
     font-size: 18px
     line-height: 27px
     text-align: center
     margin: 70px 0 0 0
+  &__button
+    margin-top: 42px
   &-button
     display: none
     position: absolute
@@ -109,8 +105,10 @@
     margin-top: 12px
     color: #343434
     & img
+      max-width: 23px
       cursor: pointer
       margin-right: 12.5px
+      display: inline-block !important
     & a
       color: #343434
     &-text
