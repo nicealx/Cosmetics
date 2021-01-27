@@ -3,6 +3,8 @@
   background: #1C1C1C
   position: relative
   z-index: 2
+  +_320
+    margin-top: 48px
   &::after
     content: ""
     position: absolute
@@ -36,6 +38,9 @@
     font-size: 45px
     line-height: 54px
     text-align: left
+    +_960
+      font-size: 35px
+      line-height: 42px
     +_480
       font-size: 18px
       line-height: 24px
@@ -45,12 +50,19 @@
     line-height: 36px
     color: #A5A5A5
     margin-top: 24px
+    +_960
+      font-size: 20px
+      line-height: 30px
     +_480
       font-size: 14px
       line-height: 21px
   &__btn
     margin-top: 65px
     padding: 30px 60px
+    +_960
+      font-size: 15px
+      line-height: 21px
+      padding: 26px 38px
     +_480
       display: flex
       justify-content: center
@@ -68,10 +80,14 @@
       min-height: 75px
     & img
       margin-right: 20px
+      +_960
+        max-width: 23.5px
       +_480
         max-width: 20px
   &__img    
     flex: 0 0 561px
+    +_960
+      max-width: 384px
     +_480
       margin-top: 34px
       padding: 0 89px
