@@ -40,8 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   allLink.forEach(item => {
     item.addEventListener('click', function(e) {
-      e.preventDefault();
-      alert('click');
+      if(e.target.href.indexOf('#') > 1) {
+        e.preventDefault();
+        alert('Ссылка пока никуда не ведет ;)');
+      }
     });
   });
 });
