@@ -22,15 +22,15 @@
     justify-content: space-between
     align-items: center
     color: #ffffff
-    +_480
+    +_720
       flex-direction: column
-    +_480
       position: relative
       padding-top: 50px
       padding-bottom: 160px
-  &__column
   &__body
     flex: 1 1 auto
+    +_960
+      padding: 0 10px 0 0
     +_320
       text-align: center
   &__title
@@ -41,6 +41,8 @@
     +_960
       font-size: 35px
       line-height: 42px
+    +_720
+      text-align: center
     +_480
       font-size: 18px
       line-height: 24px
@@ -63,7 +65,7 @@
       font-size: 15px
       line-height: 21px
       padding: 26px 38px
-    +_480
+    +_720
       display: flex
       justify-content: center
       padding: 0
@@ -72,12 +74,16 @@
       transform: translateX(-50%)
       bottom: 62px
       font-size: 16px
-      min-width: 362px
-      min-height: 85px
+      max-width: 362px
+      max-height: 85px
+      width: 100%
+      height: 100%
     +_320
       font-size: 13px
-      min-width: 277px
-      min-height: 75px
+      max-width: 277px
+      max-height: 75px
+      width: 100%
+      height: 100%
     & img
       margin-right: 20px
       +_960
@@ -88,6 +94,8 @@
     flex: 0 0 561px
     +_960
       max-width: 384px
+    +_720
+      margin-top: 34px
     +_480
       margin-top: 34px
       padding: 0 89px
