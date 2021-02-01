@@ -1,24 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
   const info = document.querySelectorAll('.info');
   const infoText = document.querySelectorAll('.item__info-text');
 
   for (let i = 0; i < info.length; i++) {
-    info[i].addEventListener('mouseover', function () {
+    info[i].addEventListener('mouseover', function() {
       infoText[i].classList.add('item__info-text--active');
     });
-    info[i].addEventListener('mouseout', function () {
+    info[i].addEventListener('mouseout', function() {
       infoText[i].classList.remove('item__info-text--active');
     });
   }
-
-  const complexHead = document.querySelector('.complex__head');
-  const complexCategory = complexHead.querySelectorAll('.complex__category');
+  
+  const complexCategory = document.querySelectorAll('.complex__category');
   const complexProduct = document.querySelectorAll('.complex__product');
 
   function hideTab() {
     for (let i = 0; i < complexCategory.length; i++) {
-      complexCategory[i].addEventListener('click', function () {
+      complexCategory[i].addEventListener('click', function() {
         showTabs(i);
       });
     }
@@ -36,16 +35,22 @@ document.addEventListener('DOMContentLoaded', function () {
   showTabs(0);
   hideTab();
 
-  // const allLink = document.querySelectorAll('a');
+  const complexSelect = document.querySelector('.complex__mobile-select');
 
-  // allLink.forEach(item => {
-  //   item.addEventListener('click', function(e) {
-  //     if(e.target.href.indexOf('#') > 1) {
-  //       e.preventDefault();
-  //       alert('Ссылка пока никуда не ведет ;)');
-  //     }
-  //   });
-  // });
+  function hideSelect() {
+    complexSelect.addEventListener('change', function() {
+        showSelects(this.value);
+      });
+  }
+
+  function showSelects(n) {
+    for (let i = 0; i < complexProduct.length; i++) {
+      complexProduct[i].classList.remove('complex__product--active');
+      complexProduct[n].classList.add('complex__product--active');
+    }
+  }
+  showSelects(0);
+  hideSelect();
 
   const productsBtn = document.querySelectorAll('.product__btn');
   const orderBtn = document.querySelectorAll('#order');
