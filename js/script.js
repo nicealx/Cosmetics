@@ -36,14 +36,71 @@ document.addEventListener('DOMContentLoaded', function () {
   showTabs(0);
   hideTab();
 
-  const allLink = document.querySelectorAll('a');
+  // const allLink = document.querySelectorAll('a');
 
-  allLink.forEach(item => {
+  // allLink.forEach(item => {
+  //   item.addEventListener('click', function(e) {
+  //     if(e.target.href.indexOf('#') > 1) {
+  //       e.preventDefault();
+  //       alert('Ссылка пока никуда не ведет ;)');
+  //     }
+  //   });
+  // });
+
+  const productsBtn = document.querySelectorAll('.product__btn');
+  const orderBtn = document.querySelectorAll('#order');
+  const catalogBtn = document.querySelector('#catalog');
+
+  const orderClose = document.querySelectorAll('.order__close');
+
+  const orderHeader = document.querySelector('.order-header');
+  const orderComplex = document.querySelector('.order-complex');
+  const orderCatalog = document.querySelector('.order-catalog');
+
+  const overlay = document.querySelector('.overlay');
+  const body = document.querySelector('body');
+
+  catalogBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      overlay.classList.add('overlay--active');
+      orderCatalog.classList.add('order--active');
+      body.classList.add('body--overflow');
+  });
+
+  orderBtn.forEach(item => {
     item.addEventListener('click', function(e) {
-      if(e.target.href.indexOf('#') > 1) {
-        e.preventDefault();
-        alert('Ссылка пока никуда не ведет ;)');
-      }
+      e.preventDefault();
+      overlay.classList.add('overlay--active');
+      orderHeader.classList.add('order--active');
+      body.classList.add('body--overflow');
     });
   });
+
+  productsBtn.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      overlay.classList.add('overlay--active');
+      orderComplex.classList.add('order--active');
+      body.classList.add('body--overflow');
+    });
+  });
+
+  orderClose.forEach(item => {
+    item.addEventListener('click', function() {
+      overlay.classList.remove('overlay--active');
+      orderHeader.classList.remove('order--active');
+      orderComplex.classList.remove('order--active');
+      orderCatalog.classList.remove('order--active');
+      body.classList.remove('body--overflow');
+    });
+  });
+
+  overlay.addEventListener('click', function() {
+    this.classList.remove('overlay--active');
+    orderHeader.classList.remove('order--active');
+    orderComplex.classList.remove('order--active');
+    orderCatalog.classList.remove('order--active');
+    body.classList.remove('body--overflow');
+  });
+
 });

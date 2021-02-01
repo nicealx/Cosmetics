@@ -1,0 +1,163 @@
+.overlay
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(#1E1E1E, 0.7)
+  z-index: 99
+  transition: all 0.3s
+  &--active
+    opacity: 1
+    visibility: visible
+    transition: all 0.3s
+
+.body--overflow
+  overflow: hidden
+
+.order
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  background-color: #fff
+  z-index: 100
+  left: 50%
+  top: 150px
+  transform: translateX(-50%)
+  transition: all 0.5s
+  max-width: 610px
+  &-complex
+    .order__container
+      padding: 77px 61px
+      +_480
+        min-width: 410px
+        padding: 20px
+      +_320
+        min-width: 310px
+    .form__btn
+      padding: 40px 103px
+      +_480
+        padding: 20px 31px
+        font-size: 14px
+        width: 100%
+  &-catalog
+    .order__container
+      padding: 263px 105px 78px 105px
+      +_480
+        min-width: 410px
+        padding: 20px
+        padding-top: 140px
+      +_320
+        min-width: 310px
+        padding-top: 50px
+    .form__btn
+      padding: 40px 100px
+      +_480
+        padding: 20px 31px
+        font-size: 14px
+        width: 100%
+    &__img
+      position: absolute
+      top: -130px
+      width: 472px
+      height: 437px
+      text-align: center
+      & img
+        width: 100%
+        +_480
+          width: 70%
+        +_320
+          width: 50%
+  &--active
+    opacity: 1
+    visibility: visible
+    transition: all 0.5s
+  &__close
+    position: absolute
+    width: 24px
+    height: 24px
+    top: -23px
+    right: -32px
+    color: #ffffff
+    font-size: 36px
+    cursor: pointer
+    +_480
+      right: 5px
+    &-line1, &-line2
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 3px
+        width: 31px
+        background-color: #fff
+    &-line1
+      &::after
+        transform: rotate(45deg)
+    &-line2
+      &::after
+        transform: rotate(-45deg)
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding: 77px
+    +_480
+      min-width: 410px
+      padding: 20px
+    +_320
+      min-width: 310px
+  &__title
+    font-weight: 600
+    font-size: 35px
+    line-height: 42px
+    text-align: center
+    margin-bottom: 17px
+    +_480
+      font-size: 20px
+      margin-bottom: 10px
+  &__subtitle
+    font-size: 18px
+    line-height: 27px
+    text-align: center
+    margin-bottom: 33px
+    +_480
+      font-size: 14px
+      margin-bottom: 15px
+  &__form
+    width: 100%
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__phone
+    font-size: 16px
+    line-height: 21px
+    text-align: center
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: #7E7E7E
+    padding: 39px 98px 41px 98px
+    background-color: #F2F2F2
+    border-radius: 6px
+    max-width: 400px
+    width: 100%
+    margin-bottom: 15px
+    +_320
+      padding: 39px 20px 41px 20px
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.07em
+    padding: 40px 62px
+    +_320
+      padding: 20px 31px
+      font-size: 14px

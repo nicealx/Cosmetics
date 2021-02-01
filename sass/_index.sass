@@ -32,6 +32,7 @@ $color-bg: #1C1C1C
   
 
 body
+  position: relative
   font-family: $segoe
   font-size: 16px
   background: #ffffff
@@ -64,6 +65,13 @@ body
   background-color: $color-main
   padding: 27px 42px
   border-radius: 6px
+  transition: all 0.3s
+  &:hover
+    transition: all 0.3s
+    background-color: #F3B55D
+  &:active
+    background-color: #DF9F45
+    transition: all 0.3s
 
 .title
   font-weight: 600
