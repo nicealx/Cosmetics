@@ -615,7 +615,7 @@ body {
 @media (max-width: 320px) {
   .form__btn {
     padding: 20px 31px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
