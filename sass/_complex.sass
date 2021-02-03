@@ -16,6 +16,12 @@
     max-width: 760px
     +_480
       display: none
+  &__select
+    position: relative
+    margin: 0 auto
+    max-width: 250px
+    font-size: 15px
+    line-height: 20px
   &__mobile
     display: none
     justify-content: center
@@ -46,6 +52,49 @@
       margin-top: 65px
     &--active
       display: flex
+
+.select
+  &--active
+    .select__body
+      display: block
+      opacity: 0
+      visibility: visible
+      transition: all 0.3s
+    .select__icon
+      transform: translateY(-25%) rotate(45deg)
+      transition: all 0.3s
+  &__head
+    display: flex
+    position: relative
+    justify-content: space-between
+    border: 1px solid $color-bg
+    padding: 13px 20px
+    z-index: 3
+    background-color: #fff
+  &__icon
+    position: relative
+    top: 7px
+    height: 7px
+    width: 7px
+    border-right: 1px solid $color-bg
+    border-bottom: 1px solid $color-bg
+    transform: translateY(25%) rotate(225deg)
+    transition: all 0.3s
+  &__body
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    background-color: #fff
+    border: 1px solid $color-bg
+    border-top: none
+    z-index: 2
+    transition: all 0.3s
+  &__item
+    padding: 10px 20px
+    &:hover
+      background-color: #c1c1c1
+  
 
 .product
   margin-top: 32px
@@ -137,7 +186,6 @@
       margin-left: 60px
       margin-top: -45px
     +_720
-      margin-top: 25px
       margin-left: 25px
     +_480
       margin-left: 0

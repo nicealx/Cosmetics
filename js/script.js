@@ -35,23 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
   showTabs(0);
   hideTab();
 
-  const complexSelect = document.querySelector('.complex__mobile-select');
-
-  function hideSelect() {
-    complexSelect.addEventListener('change', function() {
-        showSelects(this.value);
-      });
-  }
-
-  function showSelects(n) {
-    for (let i = 0; i < complexProduct.length; i++) {
-      complexProduct[i].classList.remove('complex__product--active');
-      complexProduct[n].classList.add('complex__product--active');
-    }
-  }
-  showSelects(0);
-  hideSelect();
-
   const productsBtn = document.querySelectorAll('.product__btn');
   const orderBtn = document.querySelectorAll('#order');
   const catalogBtn = document.querySelector('#catalog');
@@ -107,5 +90,39 @@ document.addEventListener('DOMContentLoaded', function() {
     orderCatalog.classList.remove('order--active');
     body.classList.remove('body--overflow');
   });
-// alert(window.outerWidth);
+
+let select = function() {
+  const selectHead = document.querySelector('.select__head');
+  const selectItem = document.querySelectorAll('.select__item');
+
+  selectHead.addEventListener('click', function() {
+    this.parentElement.classList.toggle('select--active');
+  });
+
+  selectItem.forEach(item => {
+    item.addEventListener('click', function(e) {
+      let text = this.innerText,
+          selectCurrent = document.querySelector('.select__current'),
+          dataSelect = this.getAttribute('data-select');
+        
+      selectCurrent.innerText = text;
+      selectHead.parentElement.classList.toggle('select--active');
+      if(e.targer !== item) {
+        // selectHead.parentElement.classList.remove('select--active');
+        console.log('???????');
+      }
+      showSelects(dataSelect);
+    });
+  });
+  
+  let showSelects = function(n) {
+    for (let i = 0; i < complexProduct.length; i++) {
+      complexProduct[i].classList.remove('complex__product--active');
+      complexProduct[n].classList.add('complex__product--active');
+    }
+  };
+};
+
+select();
+
 });

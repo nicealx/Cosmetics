@@ -277,6 +277,27 @@ body {
   margin: 53px 0 0 0;
 }
 
+@media (max-width: 960px) {
+  .header__body-button {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__body-button {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header__body-button {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+
 .header__body-button img {
   padding-right: 20px;
 }
@@ -1319,6 +1340,14 @@ body {
   }
 }
 
+.complex__select {
+  position: relative;
+  margin: 0 auto;
+  max-width: 250px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 .complex__mobile {
   display: none;
   -webkit-box-pack: center;
@@ -1375,6 +1404,75 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.select--active .select__body {
+  display: block;
+  opacity: 0;
+  visibility: visible;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.select--active .select__icon {
+  -webkit-transform: translateY(-25%) rotate(45deg);
+      -ms-transform: translateY(-25%) rotate(45deg);
+          transform: translateY(-25%) rotate(45deg);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.select__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #1C1C1C;
+  padding: 13px 20px;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.select__icon {
+  position: relative;
+  top: 7px;
+  height: 7px;
+  width: 7px;
+  border-right: 1px solid #1C1C1C;
+  border-bottom: 1px solid #1C1C1C;
+  -webkit-transform: translateY(25%) rotate(225deg);
+      -ms-transform: translateY(25%) rotate(225deg);
+          transform: translateY(25%) rotate(225deg);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.select__body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #1C1C1C;
+  border-top: none;
+  z-index: 2;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.select__item {
+  padding: 10px 20px;
+}
+
+.select__item:hover {
+  background-color: #c1c1c1;
 }
 
 .product {
@@ -1571,7 +1669,6 @@ body {
 
 @media (max-width: 720px) {
   .product__text {
-    margin-top: 25px;
     margin-left: 25px;
   }
 }
