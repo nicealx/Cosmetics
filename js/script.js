@@ -104,12 +104,19 @@ let select = function() {
       let text = this.innerText,
           selectCurrent = document.querySelector('.select__current'),
           dataSelect = this.getAttribute('data-select');
-        
       selectCurrent.innerText = text;
       selectHead.parentElement.classList.toggle('select--active');
       showSelects(dataSelect);
+      selectedItem(dataSelect);
     });
   });
+
+  let selectedItem = function(n) {
+    for (let i = 0; i < selectItem.length; i++) {
+      selectItem[i].classList.remove('select__item--active');
+      selectItem[n].classList.add('select__item--active');
+    }
+  }
   
   let showSelects = function(n) {
     for (let i = 0; i < complexProduct.length; i++) {

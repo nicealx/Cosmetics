@@ -1462,6 +1462,10 @@ body {
   padding: 10px 20px;
 }
 
+.select__item--active {
+  background-color: #c1c1c1;
+}
+
 .select__item:hover {
   background-color: #c1c1c1;
 }
