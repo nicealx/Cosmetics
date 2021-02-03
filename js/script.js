@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  const body = document.querySelector('body');
+
   const info = document.querySelectorAll('.info');
   const infoText = document.querySelectorAll('.item__info-text');
 
@@ -46,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const orderCatalog = document.querySelector('.order-catalog');
 
   const overlay = document.querySelector('.overlay');
-  const body = document.querySelector('body');
 
   catalogBtn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -89,6 +90,26 @@ document.addEventListener('DOMContentLoaded', function() {
     orderComplex.classList.remove('order--active');
     orderCatalog.classList.remove('order--active');
     body.classList.remove('body--overflow');
+  });  
+
+  const form = document.querySelectorAll('.form');
+
+  form.forEach(item => {
+    item.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let input = this.querySelector('input');
+
+      input.value = 'Это тест!';
+
+      setTimeout(function() {
+        overlay.classList.remove('overlay--active');
+        orderHeader.classList.remove('order--active');
+        orderComplex.classList.remove('order--active');
+        orderCatalog.classList.remove('order--active');
+        body.classList.remove('body--overflow');
+      }, 1000);
+      clearTimeout();
+    });
   });
 
 let select = function() {
@@ -116,7 +137,7 @@ let select = function() {
       selectItem[i].classList.remove('select__item--active');
       selectItem[n].classList.add('select__item--active');
     }
-  }
+  };
   
   let showSelects = function(n) {
     for (let i = 0; i < complexProduct.length; i++) {
