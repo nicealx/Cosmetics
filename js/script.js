@@ -107,5 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
     orderCatalog.classList.remove('order--active');
     body.classList.remove('body--overflow');
   });
-alert(window.outerWidth);
+// alert(window.outerWidth);
 });

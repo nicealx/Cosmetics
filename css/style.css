@@ -812,16 +812,16 @@ body {
 
 @media (max-width: 960px) {
   .cards {
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 82px;
+    margin-right: 82px;
     margin-top: -190px;
   }
 }
 
 @media (max-width: 480px) {
   .cards {
-    margin-left: 73px;
-    margin-right: 73px;
+    margin-left: 47px;
+    margin-right: 47px;
   }
 }
 
