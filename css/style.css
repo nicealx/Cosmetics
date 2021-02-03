@@ -818,6 +818,13 @@ body {
   }
 }
 
+@media (max-width: 720px) {
+  .cards {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}
+
 @media (max-width: 480px) {
   .cards {
     margin-left: 47px;
@@ -857,6 +864,12 @@ body {
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
     padding: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .cards__item {
+    min-width: 220px;
   }
 }
 
