@@ -1346,27 +1346,16 @@ body {
   max-width: 250px;
   font-size: 15px;
   line-height: 20px;
-}
-
-.complex__mobile {
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (max-width: 480px) {
-  .complex__mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .complex__select {
+    display: block;
   }
 }
 
-.complex__mobile-select {
+.complex__select-select {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
@@ -1408,7 +1397,7 @@ body {
 
 .select--active .select__body {
   display: block;
-  opacity: 0;
+  opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1416,12 +1405,12 @@ body {
 }
 
 .select--active .select__icon {
-  -webkit-transform: translateY(-25%) rotate(45deg);
-      -ms-transform: translateY(-25%) rotate(45deg);
-          transform: translateY(-25%) rotate(45deg);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-transform: translateY(25%) rotate(225deg);
+      -ms-transform: translateY(25%) rotate(225deg);
+          transform: translateY(25%) rotate(225deg);
 }
 
 .select__head {
@@ -1445,9 +1434,9 @@ body {
   width: 7px;
   border-right: 1px solid #1C1C1C;
   border-bottom: 1px solid #1C1C1C;
-  -webkit-transform: translateY(25%) rotate(225deg);
-      -ms-transform: translateY(25%) rotate(225deg);
-          transform: translateY(25%) rotate(225deg);
+  -webkit-transform: translateY(-25%) rotate(45deg);
+      -ms-transform: translateY(-25%) rotate(45deg);
+          transform: translateY(-25%) rotate(45deg);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -1455,6 +1444,8 @@ body {
 
 .select__body {
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
   top: 100%;
   left: 0;
   right: 0;

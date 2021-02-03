@@ -100,17 +100,13 @@ let select = function() {
   });
 
   selectItem.forEach(item => {
-    item.addEventListener('click', function(e) {
+    item.addEventListener('click', function() {
       let text = this.innerText,
           selectCurrent = document.querySelector('.select__current'),
           dataSelect = this.getAttribute('data-select');
         
       selectCurrent.innerText = text;
       selectHead.parentElement.classList.toggle('select--active');
-      if(e.targer !== item) {
-        // selectHead.parentElement.classList.remove('select--active');
-        console.log('???????');
-      }
       showSelects(dataSelect);
     });
   });

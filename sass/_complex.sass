@@ -22,12 +22,9 @@
     max-width: 250px
     font-size: 15px
     line-height: 20px
-  &__mobile
     display: none
-    justify-content: center
-    align-items: center
     +_480
-      display: flex
+      display: block
     &-select
       font-weight: 400
       font-size: 15px
@@ -57,12 +54,12 @@
   &--active
     .select__body
       display: block
-      opacity: 0
+      opacity: 1
       visibility: visible
       transition: all 0.3s
     .select__icon
-      transform: translateY(-25%) rotate(45deg)
       transition: all 0.3s
+      transform: translateY(25%) rotate(225deg)
   &__head
     display: flex
     position: relative
@@ -78,10 +75,12 @@
     width: 7px
     border-right: 1px solid $color-bg
     border-bottom: 1px solid $color-bg
-    transform: translateY(25%) rotate(225deg)
+    transform: translateY(-25%) rotate(45deg)
     transition: all 0.3s
   &__body
     position: absolute
+    opacity: 0
+    visibility: hidden
     top: 100%
     left: 0
     right: 0
