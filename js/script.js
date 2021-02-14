@@ -97,18 +97,19 @@ document.addEventListener('DOMContentLoaded', function() {
   form.forEach(item => {
     item.addEventListener('submit', function(e) {
       e.preventDefault();
-      let input = this.querySelector('input');
+      let orderThanks = document.querySelector('.order-thanks');
 
-      input.value = 'Это тест!';
-
-      setTimeout(function() {
-        overlay.classList.remove('overlay--active');
-        orderHeader.classList.remove('order--active');
-        orderComplex.classList.remove('order--active');
-        orderCatalog.classList.remove('order--active');
-        body.classList.remove('body--overflow');
-      }, 1000);
-      clearTimeout();
+      orderThanks.classList.add('order--active');
+      orderHeader.classList.remove('order--active');
+      orderComplex.classList.remove('order--active');
+      orderCatalog.classList.remove('order--active');
+        setTimeout(function() {
+          orderThanks.classList.remove('order--active');
+          overlay.classList.remove('overlay--active');
+          body.classList.remove('body--overflow');
+        }, 2000);
+  
+        clearTimeout();
     });
   });
 

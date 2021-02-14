@@ -24,18 +24,17 @@
   background-color: #fff
   z-index: 100
   left: 50%
-  top: 150px
-  transform: translateX(-50%)
+  top: calc(100vh / 2)
+  transform: translate(-50%, -50%)
   transition: all 0.5s
   max-width: 610px
-  +_480
-    top: 10%
   &-complex
     .order__container
       padding: 77px 61px
+      +_960
+        padding: 20px
       +_480
         min-width: 340px
-        padding: 20px
       +_320
         min-width: 310px
     .form__btn
@@ -48,7 +47,7 @@
     .order__container
       padding: 263px 105px 78px 105px
       +_480
-        min-width: 410px
+        min-width: 340px
         padding: 20px
         padding-top: 140px
       +_320
@@ -111,7 +110,7 @@
     position: relative
     padding: 77px
     +_480
-      min-width: 410px
+      min-width: 340px
       padding: 20px
     +_320
       min-width: 310px
