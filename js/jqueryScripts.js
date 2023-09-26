@@ -30,12 +30,15 @@ $(document).ready(function(){
       owlCategory.owlCarousel({
         margin: 10.5,
         responsive: {
-          481: {
+					961: {
+						items: 3
+					},
+          661: {
             items: 2
           },
-          0: {
-            items: 1
-          }
+					0: {
+						items: 1
+					}
         }
       });
       $('.category-button-prev').click(function() {
