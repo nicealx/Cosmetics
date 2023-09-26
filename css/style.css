@@ -1812,7 +1812,7 @@ body {
 
 @media (max-width: 480px) {
   .product__info-column:last-child {
-    padding: 17px 0 27px 66px;
+    width: 100%;
   }
 }
 
@@ -2064,6 +2064,7 @@ body {
 @media (max-width: 720px) {
   .bonus {
     position: inherit;
+		margin-top: 31px;
   }
 }
 
